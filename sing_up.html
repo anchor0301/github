@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>회원가입</title>
+	<style>
+		.table{
+		 width:"950px";
+			background-color:gray;
+		}
+	</style>
+</head>
+
+<body>
+	<p>
+		회원가입 //견종 입실시간 횟수 픽업 기타
+	</p>
+	<hr>
+	<form action="서버로 전송" method="post">
+		<p>* 아이디 : <input tpye="text" name="id"> </p><br><hr> 
+		<p>비밀번호 : <input text="password" mane="pwd">	
+		</p>
+		<input type="submit">
+	</form> <hr>
+	<form method="post">
+	<div class="table">
+		<table>
+			<tr>
+				<th>견종</th>
+				<td><input type="text" name="id"></td>
+			</tr>
+			
+			<tr>
+				<th>성별</th>
+				<td><input type="radio" name="sex" value="수컷"> 수컷<input type="radio" name="sex" value="암컷">암컷</td>
+			</tr>
+
+			<tr>
+				<th>입실 시간</th>
+				<td><input type="time" name="time"></td>
+			</tr>
+			
+			<tr>
+				<th>횟수</th>
+				<td><input type="number" min="1" max="10" > </td>
+			 </tr>
+			
+			<tr>
+				<th>아침 픽업</th>
+				<td><input type="time" name="moning_time" value="07:00">	</td>
+			</tr>
+			
+			<tr>
+				<th>저녁 픽업</th>
+				<td><input type="time" name="moning_time" value="20:00">	</td>
+			</tr>
+		</table>
+	</div>
+	</form>
+</body>
+</html>
