@@ -3,8 +3,21 @@
 	<title>회원가입</title>
 	<style>
 		.table{
-		 width:"950px";
+			width:300px;
 			background-color:gray;
+		}
+		.table #횟수{
+			width:30;
+		}
+		.tel input{
+			width:35px;
+			background-color:yellow;
+		}
+		.textarea{
+			width:286px;
+			height:200px;
+			font-size: 36px;
+			font-family: Consolas, sans-serif;
 		}
 	</style>
 </head>
@@ -16,44 +29,71 @@
 	<hr>
 	<form action="서버로 전송" method="post">
 		<p>* 아이디 : <input tpye="text" name="id"> </p><br><hr> 
-		<p>비밀번호 : <input text="password" mane="pwd">	
+		<p>비밀번호 : <input type="password" mane="pwd">	
 		</p>
 		<input type="submit">
 	</form> <hr>
+	
 	<form method="post">
 	<div class="table">
 		<table>
 			<tr>
 				<th>견종</th>
-				<td><input type="text" name="id"></td>
-			</tr>
+				<td><input type="text" name="id"  placeholder="견종"></td>
+			</tr> <!--견종-->
 			
 			<tr>
 				<th>성별</th>
 				<td><input type="radio" name="sex" value="수컷"> 수컷<input type="radio" name="sex" value="암컷">암컷</td>
-			</tr>
-
+			</tr> <!--성별-->
+			<tr>
+				<th>접종 여부</th>
+				<td><input type="radio" name="
+inoculation" value="yes"> Yes
+					<input type="radio" name="
+inoculation" value="no">No</td>
+			</tr>  <!--접종 여부-->
 			<tr>
 				<th>입실 시간</th>
 				<td><input type="time" name="time"></td>
-			</tr>
+			</tr>   <!--입실 시간-->
 			
 			<tr>
 				<th>횟수</th>
-				<td><input type="number" min="1" max="10" > </td>
-			 </tr>
+				<td><input type="number" id="횟수"min="1" max="10" value="1">번 </td>
+			 </tr> <!-- 횟수 -->
 			
 			<tr>
 				<th>아침 픽업</th>
 				<td><input type="time" name="moning_time" value="07:00">	</td>
-			</tr>
+			</tr> <!-- 아침 픽업-->
 			
 			<tr>
 				<th>저녁 픽업</th>
 				<td><input type="time" name="moning_time" value="20:00">	</td>
-			</tr>
+			</tr> <!-- 저녁 픽업-->
 		</table>
-	</div>
+	</div><hr>
+		<table>
+			<tr>
+				<th>견주 성함</th>
+				<td><input type="text" name="owner" placeholder="견주 성함" style="width:70px"> 님</td>
+			</tr>
+			
+			<tr>
+				<th>휴대폰</th>
+					<td>
+					<div class="tel">
+						<input type=tel name="tel" value="010" > -
+						<input type=tel name="tel"> -
+						<input type=tel name="tel">
+					</div>
+					</td>
+			</tr> 
+			
+			<tr><th>기타</th> <td> <input class=textarea type="textarea"></td></tr>
+		</table>
+		
 	</form>
 </body>
 </html>
