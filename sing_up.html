@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>회원가입</title>
+	<meta carset="UTF-8">
 	<style>
 		.table{
 			width:300px;
@@ -15,69 +16,64 @@
 		}
 		.textarea{
 			width:286px;
-			height:200px;
-			font-size: 36px;
+			height:150px;
+			font-size: 20px;
 			font-family: Consolas, sans-serif;
 		}
 	</style>
 </head>
 
 <body>
-	<p>
-		회원가입 //견종 입실시간 횟수 픽업 기타
-	</p>
-	<hr>
-	<form action="서버로 전송" method="post">
-		<p>* 아이디 : <input tpye="text" name="id"> </p><br><hr> 
-		<p>비밀번호 : <input type="password" mane="pwd">	
-		</p>
-		<input type="submit">
-	</form> <hr>
-	
-	<form method="post">
-	<div class="table">
+	<p>회원가입 </p><hr>
+	<form action="sing_up.html" name="dog" method="get" accept-charset="utf-8" >
+		<div class="table">
+			
+				<table>
+					
+				<tr>
+					<th> <label for="id"> 견종 </label> </th>
+					<td><input type="text" id="id" name="id"  placeholder="견종"></td> 
+				</tr> <!--견종-->
+
+				<tr>
+					<th><label for="sex"> 성별 </label> </th>
+					<td><input type="radio" id="sex" name="sex" value="수컷"> 수컷<input type="radio" name="sex" value="암컷">암컷</td>
+				</tr> <!--성별-->
+				<tr>
+					<th>접종 여부</th>
+					<td><input type="radio" name="
+	inoculation" value="yes"> Yes
+						<input type="radio" name="
+	inoculation" value="no">No</td>
+				</tr>  <!--접종 여부-->
+				<tr>
+					<th>입실 시간</th>
+					<td><input type="time" name="time"></td>
+				</tr>   <!--입실 시간-->
+
+				<tr>
+					<th>횟수</th>
+					<td><input type="number" id="횟수"min="1" max="10" value="1">번 </td>
+				 </tr> <!-- 횟수 -->
+
+				<tr>
+					<th>아침 픽업</th>
+					<td><input type="time" name="moning_time" value="07:00">	</td>
+				</tr> <!-- 아침 픽업-->
+
+				<tr>
+					<th>저녁 픽업</th>
+					<td><input type="time" name="moning_time" value="20:00">	</td>
+				</tr> <!-- 저녁 픽업-->
+			</table>
+				<br>
+				<input type="submit" value="등록"><br><br>
+
+		</div><hr>
 		<table>
 			<tr>
-				<th>견종</th>
-				<td><input type="text" name="id"  placeholder="견종"></td>
-			</tr> <!--견종-->
-			
-			<tr>
-				<th>성별</th>
-				<td><input type="radio" name="sex" value="수컷"> 수컷<input type="radio" name="sex" value="암컷">암컷</td>
-			</tr> <!--성별-->
-			<tr>
-				<th>접종 여부</th>
-				<td><input type="radio" name="
-inoculation" value="yes"> Yes
-					<input type="radio" name="
-inoculation" value="no">No</td>
-			</tr>  <!--접종 여부-->
-			<tr>
-				<th>입실 시간</th>
-				<td><input type="time" name="time"></td>
-			</tr>   <!--입실 시간-->
-			
-			<tr>
-				<th>횟수</th>
-				<td><input type="number" id="횟수"min="1" max="10" value="1">번 </td>
-			 </tr> <!-- 횟수 -->
-			
-			<tr>
-				<th>아침 픽업</th>
-				<td><input type="time" name="moning_time" value="07:00">	</td>
-			</tr> <!-- 아침 픽업-->
-			
-			<tr>
-				<th>저녁 픽업</th>
-				<td><input type="time" name="moning_time" value="20:00">	</td>
-			</tr> <!-- 저녁 픽업-->
-		</table>
-	</div><hr>
-		<table>
-			<tr>
-				<th>견주 성함</th>
-				<td><input type="text" name="owner" placeholder="견주 성함" style="width:70px"> 님</td>
+				<th> <label for="owner"> 견주 성함</label></th>
+				<td><input type="text" id="owner" name="owner" placeholder="견주 성함" style="width:70px" > 님</td>
 			</tr>
 			
 			<tr>
@@ -90,8 +86,11 @@ inoculation" value="no">No</td>
 					</div>
 					</td>
 			</tr> 
-			
-			<tr><th>기타</th> <td> <input class=textarea type="textarea"></td></tr>
+			<tr>
+				<th><label for="order">기타</label></th>
+				<td><input type="textarea" class="textarea" placeholder="기타특이사항" id=order name="order"></td>
+			</tr>
+			<td><input type="submit" value="등록"></td>
 		</table>
 		
 	</form>
